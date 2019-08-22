@@ -1,0 +1,12 @@
+.App{
+    width: 400px;
+    margin: 40px auto;
+}
+
+.keyboard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 400px;
+
+}
