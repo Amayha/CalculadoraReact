@@ -41,6 +41,13 @@ function handleOperation(operation){
 }
 
 
+function handleEquals(){
+  setResultado(operate (resultado, formulaDisplay.substr(-1), currentDisplay));
+  setFormulaDisplay('');
+  setCurrentDisplay(0);
+  setIsReady(false);
+}
+
 
   return (
     <div className="App">
@@ -75,7 +82,7 @@ function handleOperation(operation){
       <Button type="controller" value=","/>
 
       
-      <Button type="operation" value="="  onClick={handleOperation}/>
+      <Button type="operation" value="="  onClick={handleEquals}/>
       
   
 
@@ -102,7 +109,8 @@ b = parseFloat(b);
         
     case '⁄':
         return a / b;
-      
+    default:
+      return b;
   }
 }
 
